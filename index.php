@@ -65,6 +65,147 @@ $displayHero      = ($showHero && ($countHero > 0 || ($isHome && $demoContent)))
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <jdoc:include type="head" />
+    <!-- SEO & AEO (Answer Engine Optimization) Metadata -->
+    <meta name="description" content="Empowering healthier lives through the 90 for Life nutritional teachings of Dr. Joel D. Wallach BS, DVM, ND. Truth-based health education, live shows, holistic coaching, and plant-derived minerals.">
+    <meta name="keywords" content="Dr. Joel Wallach, Daily with Doc, 90 for Life, holistic health coach, plant derived minerals, dead doctors don't lie, nutritional supplements, food diary">
+    <meta name="author" content="Dr. Joel D. Wallach">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://dailywithdoc.com/">
+
+    <!-- Open Graph (Facebook / LinkedIn / AI crawlers) -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Daily with Doc - Empowering Healthier Lives | Dr. Joel D. Wallach">
+    <meta property="og:description" content="Empowering healthier lives through the 90 for Life nutritional teachings of Dr. Joel D. Wallach BS, DVM, ND. Live shows, coaching, and plant minerals.">
+    <meta property="og:url" content="https://dailywithdoc.com/">
+    <meta property="og:site_name" content="Daily with Doc">
+    <meta property="og:image" content="https://dailywithdoc.com/images/hero-composite.jpg">
+    <meta property="og:image:width" content="1600">
+    <meta property="og:image:height" content="650">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Daily with Doc - 90 for Life with Dr. Joel D. Wallach">
+    <meta name="twitter:description" content="Empowering healthier lives through truth-based health education, certified holistic coaches, and essential mineral nutrition.">
+    <meta name="twitter:image" content="https://dailywithdoc.com/images/hero-composite.jpg">
+
+    <!-- Preconnect for Core Web Vitals performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Schema.org JSON-LD Structured Data for AEO (AI Answer Engines & Google Knowledge Graph) -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://dailywithdoc.com/#website",
+      "url": "https://dailywithdoc.com/",
+      "name": "Daily with Doc",
+      "description": "Empowering Healthier Lives Through the 90 for Life Teachings of Dr. Joel D. Wallach BS, DVM, ND",
+      "publisher": {
+        "@id": "https://dailywithdoc.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://dailywithdoc.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://dailywithdoc.com/#organization",
+      "name": "Daily with Doc",
+      "url": "https://dailywithdoc.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://dailywithdoc.com/images/logo.png"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-855-949-3377",
+        "contactType": "customer service",
+        "areaServed": "US",
+        "availableLanguage": "en"
+      },
+      "founder": {
+        "@id": "https://dailywithdoc.com/#person"
+      },
+      "sameAs": [
+        "https://facebook.com",
+        "https://youtube.com",
+        "https://rumble.com",
+        "https://podcasts.apple.com",
+        "https://x.com"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://dailywithdoc.com/#person",
+      "name": "Dr. Joel D. Wallach",
+      "honorificSuffix": "BS, DVM, ND",
+      "jobTitle": "Veterinarian, Naturopathic Physician, Nutritional Pioneer & Author",
+      "description": "Founder of the 90 for Life nutritional movement and author of 'Dead Doctors Don't Lie'. Dr. Wallach proved the essential link between daily trace mineral nutrition and long-term biological vitality.",
+      "knowsAbout": [
+        "90 Essential Nutrients",
+        "Plant Derived Minerals",
+        "Clinical Nutrition",
+        "Epigenetics",
+        "Holistic Wellness",
+        "Deficiency-Related Health Conditions"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dailywithdoc.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Daily with Doc?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Daily with Doc is an educational health broadcast and holistic wellness portal dedicated to empowering healthier lives through the pioneering nutritional teachings and 90 for Life philosophy of Dr. Joel D. Wallach BS, DVM, ND."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the 90 for Life essential nutrients according to Dr. Joel Wallach?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 90 for Life philosophy teaches that the human body requires 90 essential nutrients daily: 60 minerals, 16 vitamins, 12 essential amino acids, and 3 essential fatty acids. These nutrients must be consumed through diet and supplementation because the human body cannot manufacture them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the four pillars of the Daily with Doc program?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The four pillars are: 1) EDUCATE - Truth-based health education decoding nutritional science. 2) EVALUATE - Finding the root deficiency cause rather than masking symptoms. 3) EQUIP - Supplying tools, food diaries, and mineral supplementation for lasting change. 4) EMPOWER - Guiding continuous personal wellness with certified health coaches."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I work with a certified Wholistic Health Coach?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can connect with a certified Wholistic Health Coach directly through the Daily with Doc coach directory to receive personalized guidance, nutrient evaluation, and protocol coaching."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Food Diary program?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Food Diary is a tracking program designed to record daily meals, identify nutritional gaps, eliminate harmful inflammatory foods, and measure daily health and energy improvements."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
+
     <link rel="icon" type="image/png" href="<?php echo $tpath; ?>/images/logo.png">
 </head>
 <body class="site <?php echo $isHome ? 'is-homepage' : 'is-innerpage'; ?>">
@@ -77,7 +218,7 @@ $displayHero      = ($showHero && ($countHero > 0 || ($isHome && $demoContent)))
                     <jdoc:include type="modules" name="logo" style="clean" />
                 <?php else : ?>
                     <a href="<?php echo Uri::base(); ?>" class="dwd-logo-link" title="<?php echo $sitename; ?>">
-                        <img src="<?php echo $logoUrl; ?>" alt="<?php echo $sitename; ?>" class="dwd-logo-img">
+                        <img src="<?php echo $logoUrl; ?>" alt="<?php echo $sitename; ?> - Dr. Joel Wallach 90 for Life" class="dwd-logo-img">
                     </a>
                 <?php endif; ?>
             </div>
@@ -288,7 +429,7 @@ $displayHero      = ($showHero && ($countHero > 0 || ($isHome && $demoContent)))
                         <div class="dwd-sidebar-box dwd-diary-box">
                             <h3 class="dwd-sidebar-title"><?php echo Text::_('TPL_DAILYWITHDOC_FOOD_DIARY_TITLE'); ?></h3>
                             <div class="dwd-diary-body">
-                                <img src="<?php echo $tpath; ?>/images/food-diary-notebook.png" alt="Food Diary" class="dwd-diary-img">
+                                <img src="<?php echo $tpath; ?>/images/food-diary-notebook.png" alt="Start Your Daily Food Diary - 90 for Life Nutritional Tracking" class="dwd-diary-img">
                                 <p class="dwd-diary-text"><?php echo Text::_('TPL_DAILYWITHDOC_FOOD_DIARY_DESC'); ?></p>
                             </div>
                             <a href="#food-diary" class="btn-yellow"><?php echo Text::_('TPL_DAILYWITHDOC_GET_STARTED'); ?></a>
@@ -374,7 +515,7 @@ $displayHero      = ($showHero && ($countHero > 0 || ($isHome && $demoContent)))
                             <div class="dwd-hero-inner">
                                 <div class="dwd-hero-content">
                                     <div class="dwd-hero-logo">
-                                        <img src="<?php echo $logoUrl; ?>" alt="Daily with Doc">
+                                        <img src="<?php echo $logoUrl; ?>" alt="Daily with Doc - Empowering Healthier Lives Through 90 for Life">
                                     </div>
                                     <div class="dwd-hero-typography">
                                         <h1 class="dwd-hero-lead"><?php echo htmlspecialchars($heroHeadline, ENT_QUOTES, 'UTF-8'); ?></h1>
@@ -420,7 +561,7 @@ $displayHero      = ($showHero && ($countHero > 0 || ($isHome && $demoContent)))
 
                                 <!-- People Hero Visual (Created from User Original Photo) -->
                                 <div class="dwd-hero-visual">
-                                    <img src="<?php echo $tpath; ?>/images/hero-people.png" alt="Dr. Joel D. Wallach and Co-host" class="dwd-hero-people-img">
+                                    <img src="<?php echo $tpath; ?>/images/hero-people.png" alt="Dr. Joel D. Wallach BS DVM ND and Co-host on Daily with Doc Show" class="dwd-hero-people-img">
                                 </div>
                             </div>
                         </section>
@@ -440,7 +581,7 @@ $displayHero      = ($showHero && ($countHero > 0 || ($isHome && $demoContent)))
                         <!-- Card 1: Health News -->
                         <div class="dwd-feature-card">
                             <div class="dwd-card-bg-wrap">
-                                <img src="<?php echo $tpath; ?>/images/card-news.jpg" alt="Health News">
+                                <img src="<?php echo $tpath; ?>/images/card-news.jpg" alt="Daily with Doc Health News and Holistic Wellness Articles">
                             </div>
                             <div class="dwd-card-content">
                                 <div class="dwd-card-icon-circle">
@@ -455,7 +596,7 @@ $displayHero      = ($showHero && ($countHero > 0 || ($isHome && $demoContent)))
                         <!-- Card 2: Store -->
                         <div class="dwd-feature-card">
                             <div class="dwd-card-bg-wrap">
-                                <img src="<?php echo $tpath; ?>/images/card-store.jpg" alt="Store">
+                                <img src="<?php echo $tpath; ?>/images/card-store.jpg" alt="90 for Life Essential Nutrients and Plant Derived Minerals Store">
                             </div>
                             <div class="dwd-card-content">
                                 <div class="dwd-card-icon-circle">
@@ -470,7 +611,7 @@ $displayHero      = ($showHero && ($countHero > 0 || ($isHome && $demoContent)))
                         <!-- Card 3: Find a Coach for You -->
                         <div class="dwd-feature-card">
                             <div class="dwd-card-bg-wrap">
-                                <img src="<?php echo $tpath; ?>/images/card-coach.jpg" alt="Find a Coach">
+                                <img src="<?php echo $tpath; ?>/images/card-coach.jpg" alt="Find a Certified Wholistic Health Coach for You">
                             </div>
                             <div class="dwd-card-content">
                                 <div class="dwd-card-icon-circle">
@@ -485,7 +626,7 @@ $displayHero      = ($showHero && ($countHero > 0 || ($isHome && $demoContent)))
                         <!-- Card 4: About Us -->
                         <div class="dwd-feature-card">
                             <div class="dwd-card-bg-wrap">
-                                <img src="<?php echo $tpath; ?>/images/card-about.jpg" alt="About Us">
+                                <img src="<?php echo $tpath; ?>/images/card-about.jpg" alt="About Daily with Doc and Dr. Joel Wallach Mission">
                             </div>
                             <div class="dwd-card-content">
                                 <div class="dwd-card-icon-circle">
