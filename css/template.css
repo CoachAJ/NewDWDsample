@@ -921,15 +921,77 @@ img {
 }
 
 /* ==========================================================================
-   Responsive Breakpoints
+   Responsive Breakpoints & Mobile Optimization
    ========================================================================== */
+
+/* Prevent any horizontal overflow */
+html, body {
+    overflow-x: hidden !important;
+    width: 100%;
+    max-width: 100vw;
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: rgba(245, 177, 20, 0.2);
+}
+
+/* Base input mobile zoom fix for iOS Safari */
+.dwd-input, 
+input[type="text"], 
+input[type="email"], 
+input[type="search"], 
+input[type="tel"], 
+select, 
+textarea {
+    font-size: 16px !important; /* Prevents auto-zoom in mobile Safari */
+    -webkit-appearance: none;
+}
+
+/* Touch action optimization */
+button, 
+a, 
+input, 
+.btn-yellow, 
+.btn-navy, 
+.dwd-btn-download,
+.dwd-pillar-item,
+.dwd-quick-links-list a {
+    touch-action: manipulation;
+}
+
+/* Backdrop for Mobile Navigation */
+.dwd-nav-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(5, 32, 56, 0.65);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    z-index: 98;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.dwd-nav-backdrop.active {
+    display: block;
+    opacity: 1;
+}
+
+body.nav-open {
+    overflow: hidden !important;
+}
+
+/* Tablet & Desktop Large (< 1080px) */
 @media (max-width: 1080px) {
     .dwd-grid-layout {
-        grid-template-columns: 210px 1fr;
+        grid-template-columns: 220px 1fr;
+        gap: 16px;
     }
     
     .dwd-hero-content {
-        max-width: 62%;
+        max-width: 60%;
+        padding: 20px 14px 20px 22px;
     }
     
     .dwd-hero-docname {
@@ -942,36 +1004,116 @@ img {
     
     .dwd-bottom-cards {
         grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
     }
     
     .dwd-footer-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
     }
 }
 
+/* Mobile & Tablet Portrait (< 860px) */
 @media (max-width: 860px) {
+    /* Header layout */
+    .dwd-header {
+        padding: 6px 0;
+    }
+
     .dwd-header-inner {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
         align-items: center;
-        gap: 12px;
+        justify-content: space-between;
+        padding: 8px 14px;
+        gap: 10px;
     }
     
-    .dwd-grid-layout {
-        grid-template-columns: 1fr;
+    .dwd-logo-img {
+        height: 46px;
+        max-width: 190px;
     }
     
-    .dwd-sidebar {
-        order: 2;
+    .dwd-header-right {
+        gap: 10px;
     }
     
-    .dwd-main-column {
-        order: 1;
+    .dwd-phone-link {
+        font-size: 1rem;
+        gap: 8px;
+        background-color: #f0f5fa;
+        padding: 6px 14px;
+        border-radius: 50px;
+        border: 1px solid #d8e5f2;
+        transition: background-color 0.2s ease, transform 0.15s ease;
     }
     
+    .dwd-phone-link:active {
+        transform: scale(0.97);
+        background-color: #e2eef9;
+    }
+    
+    .phone-icon-circle {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .phone-icon-circle svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    /* Hide social list from top header on mobile to prevent overcrowding */
+    .dwd-header-right .dwd-social-list {
+        display: none;
+    }
+
+    /* Navigation Bar & Mobile Drawer */
+    .dwd-navbar-wrap {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .dwd-navbar {
+        height: 48px;
+        padding: 0 12px;
+    }
+
+    /* Modern Animated Mobile Toggle */
     .dwd-mobile-toggle {
         display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        color: varwd-white;
+        color: #ffffff;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        transition: all 0.2s ease;
     }
-    
+
+    .dwd-mobile-toggle:active {
+        background: rgba(255, 255, 255, 0.25);
+        transform: scale(0.97);
+    }
+
+    .dwd-mobile-toggle svg {
+        width: 20px;
+        height: 20px;
+        transition: transform 0.2s ease;
+    }
+
+    .dwd-mobile-toggle.is-active svg {
+        transform: rotate(90deg);
+    }
+
+    /* Slide-down Mobile Navigation Drawer */
     .dwd-nav-menu {
         display: none;
         flex-direction: column;
@@ -979,97 +1121,492 @@ img {
         top: 100%;
         left: 0;
         right: 0;
-        background-color: var(--dwd-primary);
-        height: auto;
-        padding: 10px 0;
-        box-shadow: var(--dwd-shadow-lg);
+        background: linear-gradient(180deg, #083256 0%, #052038 100%);
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 8px 0 20px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 999;
     }
-    
+
     .dwd-nav-menu.active {
         display: flex;
+        animation: dwdMobileMenuSlide 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    
+
+    @keyframes dwdMobileMenuSlide {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
     .dwd-nav-menu > li {
         width: 100%;
         height: auto;
+        flex-direction: column;
+        align-items: stretch;
     }
-    
+
     .dwd-nav-menu > li > a,
     .dwd-nav-menu > li > .nav-heading {
-        padding: 12px 20px;
+        padding: 13px 20px;
         width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        height: auto;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        font-size: 0.92rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #ffffff;
+        transition: background-color 0.15s ease, color 0.15s ease;
     }
-    
+
+    .dwd-nav-menu > li > a:active,
+    .dwd-nav-menu > li > a:hover {
+        background-color: rgba(255, 255, 255, 0.08);
+        color: var(--dwd-secondary);
+    }
+
+    .dwd-nav-menu > li.current > a,
+    .dwd-nav-menu > li.active > a {
+        background-color: rgba(245, 177, 20, 0.12);
+        color: var(--dwd-secondary);
+        border-left: 4px solid var(--dwd-secondary);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    /* Submenu Accordion on Mobile */
     .dwd-nav-menu .dropdown-menu {
         position: static;
         box-shadow: none;
-        background-color: rgba(0, 0, 0, 0.15);
+        background-color: rgba(0, 0, 0, 0.22);
         border-radius: 0;
-        padding-left: 16px;
+        padding: 0;
+        list-style: none;
+        display: none;
     }
-    
+
+    .dwd-nav-menu > li.open > .dropdown-menu {
+        display: block;
+        animation: dwdAccordionDown 0.2s ease-out;
+    }
+
+    @keyframes dwdAccordionDown {
+        from { opacity: 0; transform: translateY(-6px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
     .dropdown-menu li a {
-        color: var(--dwd-white);
+        padding: 11px 20px 11px 36px;
+        font-size: 0.88rem;
+        color: #d8e5f2;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        display: block;
     }
-    
-    .dwd-hero-inner {
+
+    .dropdown-menu li a:active {
+        background-color: rgba(255, 255, 255, 0.08);
+        color: var(--dwd-secondary);
+    }
+
+    .dwd-nav-menu > li .chevron-down {
+        transition: transform 0.25s ease;
+    }
+
+    .dwd-nav-menu > li.open > a .chevron-down {
+        transform: rotate(180deg);
+        color: var(--dwd-secondary);
+    }
+
+    /* Drawer Footer: Social & Call in Menu */
+    .dwd-drawer-footer {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        padding: 18px 20px 10px;
+        background: rgba(0, 0, 0, 0.2);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 8px;
     }
-    
-    .dwd-hero-content {
-        max-width: 100%;
-        padding: 24px 20px;
-    }
-    
-    .dwd-hero-visual {
-        max-height: 280px;
+
+    .dwd-drawer-footer .dwd-social-list {
+        display: flex;
         justify-content: center;
     }
-    
-    .dwd-hero-people-img {
-        max-height: 280px;
-        object-position: center top;
-    }
-}
 
-@media (max-width: 600px) {
-    .dwd-phone-link {
-        font-size: 1.15rem;
+    .dwd-drawer-call-btn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: linear-gradient(180deg, #ffc82c 0%, #f5a800 100%);
+        color: #083256 !important;
+        padding: 10px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 0.95rem;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
     }
-    
-    .phone-icon-circle {
-        width: 30px;
-        height: 30px;
+
+    /* Full-width Search Modal on Mobile */
+    .dwd-search-modal {
+        position: fixed;
+        top: 48px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        border-radius: 0 0 12px 12px;
+        padding: 12px 14px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
     }
-    
-    .phone-icon-circle svg {
-        width: 16px;
-        height: 16px;
+
+    .dwd-search-input {
+        height: 44px;
+        font-size: 16px !important;
     }
-    
-    .dwd-hero-pillars {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+
+    .dwd-search-modal .btn-navy {
+        padding: 0 20px;
+        height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
-    
-    .dwd-pillar-item {
+
+    /* Main Grid: Reorder on Mobile (Content & Hero FIRST, Sidebar SECOND) */
+    .dwd-main-wrap {
+        padding: 14px 0 32px;
+    }
+
+    .dwd-grid-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .dwd-main-column {
+        order: 1;
         width: 100%;
     }
-    
+
+    .dwd-sidebar {
+        order: 2;
+        width: 100%;
+        gap: 16px;
+    }
+
+    /* Hero Section Mobile Polish with Perfect Flow */
+    .dwd-hero-section {
+        min-height: auto;
+        padding: 20px 14px 22px;
+        border-radius: var(--dwd-radius-md);
+        margin-bottom: 16px;
+        background: #fbf9f4 url('../images/hero-bg.jpg') center/cover no-repeat;
+    }
+
+    .dwd-hero-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Using display: contents to sequence children perfectly:
+       1) Logo -> 2) Typography -> 3) People Image -> 4) 4 Badges */
+    .dwd-hero-content {
+        display: contents;
+    }
+
+    .dwd-hero-logo {
+        order: 1;
+        max-width: 250px;
+        margin: 0 auto 12px;
+        width: 100%;
+    }
+
+    .dwd-hero-logo img {
+        height: 44px;
+        margin: 0 auto;
+    }
+
+    .dwd-hero-typography {
+        order: 2;
+        margin-bottom: 12px;
+        width: 100%;
+    }
+
+    .dwd-hero-lead {
+        font-size: 1.15rem;
+        line-height: 1.35;
+    }
+
+    .dwd-hero-script-wrap {
+        justify-content: center;
+        margin: 2px 0 4px;
+    }
+
+    .dwd-hero-script {
+        font-size: 2.2rem;
+    }
+
+    .dwd-hero-lead-author {
+        font-size: 1rem;
+    }
+
+    .dwd-hero-docname {
+        font-size: 1.32rem;
+        line-height: 1.25;
+    }
+
+    /* People Image sits directly under the headline (order: 3) */
+    .dwd-hero-visual {
+        order: 3;
+        width: 100%;
+        max-width: 380px;
+        margin: 8px auto 14px;
+        display: flex;
+        justify-content: center;
+        overflow: visible;
+    }
+
+    .dwd-hero-people-img {
+        max-height: 260px;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+        filter: drop-shadow(0 4px 14px rgba(8, 50, 86, 0.16));
+        border-radius: 12px;
+    }
+
+    /* The 4 Badges sit below the photo (order: 4) in a 2x2 Modern Grid */
+    .dwd-hero-pillars {
+        order: 4;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .dwd-pillar-item {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        border: 1px solid rgba(8, 50, 86, 0.08);
+        border-radius: 12px;
+        padding: 12px 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: transform 0.15s ease;
+    }
+
+    .dwd-pillar-item:active {
+        transform: scale(0.98);
+    }
+
+    .dwd-pillar-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 6px;
+    }
+
+    .dwd-pillar-title {
+        font-size: 0.82rem;
+        margin-bottom: 2px;
+    }
+
+    .dwd-pillar-sub {
+        font-size: 0.72rem;
+        line-height: 1.3;
+    }
+
+    /* Bottom 4 Cards on Mobile */
     .dwd-bottom-cards {
         grid-template-columns: 1fr;
+        gap: 14px;
+        margin-bottom: 16px;
     }
-    
+
+    .dwd-feature-card {
+        min-height: 160px;
+        border-radius: 12px;
+    }
+
+    .dwd-card-content {
+        padding: 16px 14px;
+    }
+
+    .dwd-card-title {
+        font-size: 1.1rem;
+    }
+
+    .dwd-card-desc {
+        font-size: 0.82rem;
+        max-width: 90%;
+    }
+
+    .btn-navy {
+        padding: 8px 22px;
+        font-size: 0.8rem;
+    }
+
+    /* Sidebar Cards on Mobile */
+    .dwd-sidebar-box {
+        padding: 16px 14px;
+        border-radius: 12px;
+    }
+
+    .dwd-sidebar-title {
+        font-size: 1.12rem;
+    }
+
+    .dwd-input {
+        height: 44px;
+        font-size: 16px !important;
+        margin-bottom: 10px;
+    }
+
+    .btn-yellow {
+        height: 46px;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dwd-quick-links-list a {
+        padding: 12px 6px;
+        font-size: 0.92rem;
+        position: relative;
+    }
+
+    .dwd-quick-links-list a::after {
+        content: "›";
+        position: absolute;
+        right: 8px;
+        font-size: 1.25rem;
+        color: var(--dwd-text-muted);
+        line-height: 1;
+    }
+
+    .dwd-quick-links-list a:active {
+        background-color: #eaf1f8;
+        border-radius: 6px;
+    }
+
+    /* Footer Mobile Polish */
+    .dwd-footer {
+        padding: 32px 0 20px;
+    }
+
     .dwd-footer-grid {
         grid-template-columns: 1fr;
+        gap: 22px;
+        margin-bottom: 24px;
     }
-    
+
+    .dwd-footer-col h4 {
+        margin-bottom: 12px;
+    }
+
     .dwd-footer-bottom {
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
         text-align: center;
+        padding-top: 16px;
     }
 }
 
+/* Small Smartphone Optimization (< 480px) */
+@media (max-width: 480px) {
+    .dwd-container {
+        padding: 0 10px;
+    }
+
+    .dwd-header-inner {
+        padding: 6px 10px;
+    }
+
+    .dwd-logo-img {
+        height: 38px;
+        max-width: 145px;
+    }
+
+    .dwd-phone-link {
+        font-size: 0.88rem;
+        padding: 5px 10px;
+        gap: 6px;
+    }
+
+    .phone-icon-circle {
+        width: 24px;
+        height: 24px;
+    }
+
+    .phone-icon-circle svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .dwd-hero-lead {
+        font-size: 1rem;
+    }
+
+    .dwd-hero-script {
+        font-size: 1.9rem;
+    }
+
+    .dwd-hero-docname {
+        font-size: 1.18rem;
+    }
+
+    .dwd-hero-people-img {
+        max-height: 230px;
+    }
+
+    .dwd-hero-pillars {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .dwd-pillar-item {
+        padding: 10px 4px;
+    }
+
+    .dwd-pillar-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .dwd-pillar-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .dwd-pillar-title {
+        font-size: 0.74rem;
+    }
+
+    .dwd-pillar-sub {
+        font-size: 0.65rem;
+    }
+
+    /* Preview Banner on Small Screens */
+    .dwd-preview-banner {
+        padding: 6px 10px;
+        font-size: 0.78rem;
+    }
+
+    .dwd-btn-download {
+        font-size: 0.72rem;
+        padding: 4px 8px;
+    }
+}
