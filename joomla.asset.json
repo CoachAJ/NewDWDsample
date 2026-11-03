@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-metas/web_assets.json",
+  "name": "dailywithdoc",
+  "version": "1.0.0",
+  "description": "Daily with Doc Template Assets",
+  "license": "GPL-2.0-or-later",
+  "assets": [
+    {
+      "name": "template.dailywithdoc",
+      "description": "Daily with Doc Main Styles",
+      "type": "style",
+      "uri": "css/template.css",
+      "dependencies": [
+        "core"
+      ]
+    },
+    {
+      "name": "template.dailywithdoc.custom",
+      "description": "Daily with Doc Custom Styles",
+      "type": "style",
+      "uri": "css/custom.css",
+      "dependencies": [
+        "template.dailywithdoc"
+      ]
+    },
+    {
+      "name": "template.dailywithdoc.js",
+      "description": "Daily with Doc JavaScript",
+      "type": "script",
+      "uri": "js/template.js",
+      "dependencies": [
+        "core"
+      ],
+      "attributes": {
+        "defer": true
+      }
+    }
+  ]
+}
+

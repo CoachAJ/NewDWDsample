@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="template" client="site" method="upgrade">
+    <name>dailywithdoc</name>
+    <version>1.0.0</version>
+    <creationDate>November 2026</creationDate>
+    <author>Daily with Doc Team</author>
+    <authorEmail>support@dailywithdoc.com</authorEmail>
+    <authorUrl>https://dailywithdoc.com</authorUrl>
+    <copyright>Copyright (C) 2026 Daily with Doc. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <description>TPL_DAILYWITHDOC_XML_DESCRIPTION</description>
+    <inheritable>1</inheritable>
+    <files>
+        <filename>index.php</filename>
+        <filename>templateDetails.xml</filename>
+        <filename>joomla.asset.json</filename>
+        <filename>error.php</filename>
+        <filename>offline.php</filename>
+        <filename>component.php</filename>
+        <filename>template_preview.png</filename>
+        <filename>template_thumbnail.png</filename>
+        <folder>css</folder>
+        <folder>js</folder>
+        <folder>images</folder>
+        <folder>html</folder>
+        <folder>language</folder>
+    </files>
+    <positions>
+        <position>topbar-left</position>
+        <position>topbar-phone</position>
+        <position>topbar-social</position>
+        <position>logo</position>
+        <position>menu</position>
+        <position>search</position>
+        <position>hero</position>
+        <position>sidebar-left</position>
+        <position>breadcrumbs</position>
+        <position>content-top</position>
+        <position>mainbody</position>
+        <position>content-bottom</position>
+        <position>bottom-1</position>
+        <position>bottom-2</position>
+        <position>bottom-3</position>
+        <position>bottom-4</position>
+        <position>footer-1</position>
+        <position>footer-2</position>
+        <position>footer-3</position>
+        <position>footer-4</position>
+        <position>copyright</position>
+        <position>debug</position>
+    </positions>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" label="TPL_DAILYWITHDOC_BASIC_SETTINGS_LABEL">
+                <field name="sitePhone" type="text" default="855-949-3377" label="TPL_DAILYWITHDOC_PHONE_LABEL" description="TPL_DAILYWITHDOC_PHONE_DESC" />
+                <field name="facebookUrl" type="url" default="https://facebook.com" label="Facebook URL" />
+                <field name="youtubeUrl" type="url" default="https://youtube.com" label="YouTube URL" />
+                <field name="rumbleUrl" type="url" default="https://rumble.com" label="Rumble Channel URL" />
+                <field name="podcastUrl" type="url" default="https://podcasts.apple.com" label="Podcast URL" />
+                <field name="twitterUrl" type="url" default="https://x.com" label="X (Twitter) URL" />
+                <field name="showHero" type="radio" default="1" label="TPL_DAILYWITHDOC_SHOW_HERO_LABEL" class="btn-group btn-group-yesno">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="heroHeadline" type="text" default="Empowering Healthier Lives Through the" label="Hero Headline Top" />
+                <field name="heroSubheadline" type="text" default="90 for Life" label="Hero Script Text" />
+                <field name="heroAuthorLead" type="text" default="Teachings of" label="Hero Author Lead" />
+                <field name="heroDoctorName" type="text" default="Dr. Joel D. Wallach BS, DVM, ND" label="Doctor Name" />
+                <field name="customLogo" type="media" label="Custom Logo" description="Upload custom header logo" />
+                <field name="demoContent" type="radio" default="1" label="Show Sample Fallback Content When Positions Are Empty" class="btn-group btn-group-yesno">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+            <fieldset name="colors" label="TPL_DAILYWITHDOC_COLORS_LABEL">
+                <field name="colorPrimary" type="color" default="#0a3c63" label="Primary Navy Color" />
+                <field name="colorSecondary" type="color" default="#f5b114" label="Accent Gold/Yellow Color" />
+                <field name="colorBlue" type="color" default="#1b75bb" label="Vibrant Blue Accent" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
+
