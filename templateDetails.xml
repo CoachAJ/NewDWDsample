@@ -62,10 +62,11 @@
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
-                <field name="heroHeadline" type="text" default="Empowering Healthier Lives Through the" label="Hero Headline Top" />
-                <field name="heroSubheadline" type="text" default="90 for Life" label="Hero Script Text" />
-                <field name="heroAuthorLead" type="text" default="Teachings of" label="Hero Author Lead" />
-                <field name="heroDoctorName" type="text" default="Dr. Joel D. Wallach BS, DVM, ND" label="Doctor Name" />
+                <field name="heroKicker" type="text" default="Your Health. Your Journey. Your Life." label="Hero Tagline Kicker" />
+                <field name="heroTitle" type="text" default="Discover the Power of" label="Hero Title Intro" />
+                <field name="heroScript" type="text" default="90 for Life!" label="Hero Script Text" />
+                <field name="heroDesc" type="textarea" rows="3" default="Your trusted resource for empowering healthier lives through the nutritional teachings of Dr. Joel D. Wallach, BS, DVM, ND." label="Hero Description" />
+                <field name="heroTagline" type="text" default="Get Educated. Get Empowered. Get Started!" label="Hero Action Callout" />
                 <field name="customLogo" type="media" label="Custom Logo" description="Upload custom header logo" />
                 <field name="demoContent" type="radio" default="1" label="Show Sample Fallback Content When Positions Are Empty" class="btn-group btn-group-yesno">
                     <option value="1">JYES</option>

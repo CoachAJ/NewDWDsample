@@ -62,10 +62,11 @@ You can easily adjust the site’s text, phone numbers, doctor name, and colors 
 2. Click the **Basic Configuration** tab:
    - **Phone Number**: Change `855-949-3377` to any number (it automatically updates the click-to-call links).
    - **Social Media URLs**: Paste your official URLs for **Facebook**, **YouTube**, **Rumble**, **Apple Podcasts**, and **X (Twitter)**. Leaving any field blank automatically hides that icon.
-   - **Hero Headline Top**: Edit *"Empowering Healthier Lives Through the"*.
-   - **Hero Script Text**: Edit *"90 for Life"*.
-   - **Hero Author Lead**: Edit *"Teachings of"*.
-   - **Doctor Name**: Edit *"Dr. Joel D. Wallach BS, DVM, ND"*.
+   - **Hero Tagline Kicker**: Edit *"Your Health. Your Journey. Your Life."*.
+   - **Hero Title Intro**: Edit *"Discover the Power of"*.
+   - **Hero Script Text**: Edit *"90 for Life!"*.
+   - **Hero Description**: Edit *"Your trusted resource for empowering healthier lives through the nutritional teachings of Dr. Joel D. Wallach, BS, DVM, ND."*.
+   - **Hero Action Callout**: Edit *"Get Educated. Get Empowered. Get Started!"*.
    - **Custom Logo**: Upload or select a different logo file from Joomla Media Manager.
    - **Demo Fallback Content**: Set to **Yes** to keep sample cards visible, or **No** once you create your own custom modules.
 3. Click the **Theme Colors** tab:
@@ -81,7 +82,7 @@ All images used by the template are stored in:
 
 | File Name | Purpose | Dimensions |
 | :--- | :--- | :--- |
-| **`logo.png`** | Header and Hero logo with stethoscope & sunflower | ~420 × 80 px (transparent PNG) |
+| **`logo.png`** | Header navigation logo with stethoscope & sunflower | ~420 × 80 px (transparent PNG) |
 | **`hero-people.png`** | Dr. Joel Wallach & Co-host photo (feathered left edge) | ~865 × 750 px (transparent PNG) |
 | **`hero-bg.jpg`** | Warm golden bokeh hero background | 1600 × 650 px (JPG) |
 | **`food-diary-notebook.png`** | Spiral notebook with sunflower for the sidebar module | ~64 × 110 px (transparent PNG) |

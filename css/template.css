@@ -563,34 +563,42 @@ img {
     z-index: 3;
 }
 
-.dwd-hero-logo {
-    margin-bottom: 14px;
-    max-width: 320px;
-}
-
-.dwd-hero-logo img {
-    height: 52px;
-    width: auto;
-    object-fit: contain;
-}
-
 .dwd-hero-typography {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
-.dwd-hero-lead {
-    font-family: var(--dwd-font-serif);
-    font-size: 1.25rem;
+.dwd-hero-kicker {
+    font-size: 1.02rem;
+    font-weight: 800;
     color: var(--dwd-primary);
-    line-height: 1.3;
-    font-weight: 700;
+    letter-spacing: 0.8px;
+    margin-bottom: 6px;
+    display: inline-block;
+    position: relative;
+    padding-left: 14px;
+    text-transform: uppercase;
 }
 
-.dwd-hero-script-wrap {
-    display: inline-flex;
-    align-items: baseline;
-    gap: 8px;
-    margin: 4px 0;
+.dwd-hero-kicker::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--dwd-secondary);
+}
+
+.dwd-hero-title {
+    font-family: var(--dwd-font-serif);
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: var(--dwd-primary);
+    line-height: 1.25;
+    margin-bottom: 10px;
+    letter-spacing: -0.2px;
 }
 
 .dwd-hero-script {
@@ -600,22 +608,29 @@ img {
     color: var(--dwd-script-blue);
     line-height: 1;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
+    display: inline-block;
+    margin-left: 4px;
 }
 
-.dwd-hero-lead-author {
-    font-family: var(--dwd-font-serif);
-    font-size: 1.1rem;
-    color: var(--dwd-primary);
-    font-weight: 700;
+.dwd-hero-desc {
+    font-size: 0.98rem;
+    color: #2c3e50;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    max-width: 600px;
 }
 
-.dwd-hero-docname {
-    font-family: var(--dwd-font-serif);
-    font-size: 1.55rem;
-    font-weight: 700;
+.dwd-hero-desc strong {
     color: var(--dwd-primary-dark);
-    line-height: 1.2;
-    letter-spacing: -0.2px;
+    font-weight: 700;
+}
+
+.dwd-hero-tagline {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--dwd-primary-light);
+    letter-spacing: 0.2px;
+    margin-bottom: 16px;
 }
 
 /* 4 Health Pillars / Badges */
@@ -1342,56 +1357,52 @@ body.nav-open {
         text-align: center;
     }
 
-    /* Using display: contents to sequence children perfectly:
-       1) Logo -> 2) Typography -> 3) People Image -> 4) 4 Badges */
+    /* Using display: contents to sequence children perfectly on mobile:
+       1) Typography -> 2) People Image -> 3) 4 Badges */
     .dwd-hero-content {
         display: contents;
     }
 
-    .dwd-hero-logo {
-        order: 1;
-        max-width: 250px;
-        margin: 0 auto 12px;
-        width: 100%;
-    }
-
-    .dwd-hero-logo img {
-        height: 44px;
-        margin: 0 auto;
-    }
-
     .dwd-hero-typography {
-        order: 2;
+        order: 1;
         margin-bottom: 12px;
         width: 100%;
     }
 
-    .dwd-hero-lead {
-        font-size: 1.15rem;
-        line-height: 1.35;
+    .dwd-hero-kicker {
+        font-size: 0.92rem;
+        padding-left: 0;
+        margin-bottom: 4px;
     }
 
-    .dwd-hero-script-wrap {
-        justify-content: center;
-        margin: 2px 0 4px;
+    .dwd-hero-kicker::before {
+        display: none;
+    }
+
+    .dwd-hero-title {
+        font-size: 1.45rem;
+        line-height: 1.3;
+        margin-bottom: 8px;
     }
 
     .dwd-hero-script {
-        font-size: 2.2rem;
+        font-size: 2.1rem;
     }
 
-    .dwd-hero-lead-author {
-        font-size: 1rem;
+    .dwd-hero-desc {
+        font-size: 0.92rem;
+        margin: 0 auto 8px;
+        max-width: 100%;
     }
 
-    .dwd-hero-docname {
-        font-size: 1.32rem;
-        line-height: 1.25;
+    .dwd-hero-tagline {
+        font-size: 0.98rem;
+        margin-bottom: 12px;
     }
 
-    /* People Image sits directly under the headline (order: 3) */
+    /* People Image sits directly under the headline (order: 2) */
     .dwd-hero-visual {
-        order: 3;
+        order: 2;
         width: 100%;
         max-width: 380px;
         margin: 8px auto 14px;
@@ -1411,7 +1422,7 @@ body.nav-open {
 
     /* The 4 Badges sit below the photo (order: 4) in a 2x2 Modern Grid */
     .dwd-hero-pillars {
-        order: 4;
+        order: 3;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
@@ -1583,16 +1594,24 @@ body.nav-open {
         height: 12px;
     }
 
-    .dwd-hero-lead {
-        font-size: 1rem;
+    .dwd-hero-kicker {
+        font-size: 0.82rem;
+    }
+
+    .dwd-hero-title {
+        font-size: 1.3rem;
     }
 
     .dwd-hero-script {
-        font-size: 1.9rem;
+        font-size: 1.85rem;
     }
 
-    .dwd-hero-docname {
-        font-size: 1.18rem;
+    .dwd-hero-desc {
+        font-size: 0.86rem;
+    }
+
+    .dwd-hero-tagline {
+        font-size: 0.9rem;
     }
 
     .dwd-hero-people-img {
