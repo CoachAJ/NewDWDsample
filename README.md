@@ -1,8 +1,11 @@
 # Daily with Doc - Joomla 6.0 & 5.x Template
 
-A modern, responsive Joomla 6.0 and 5.x site template crafted for **DailywithDoc.com**, featuring the nutritional education and **90 for Life** teachings of **Dr. Joel D. Wallach BS, DVM, ND**.
+A modern, mobile-responsive Joomla 6.0 and 5.x site template crafted for **DailywithDoc.com**, featuring the nutritional education and **90 for Life** teachings of **Dr. Joel D. Wallach BS, DVM, ND**.
 
 The template faithfully reproduces the design mockup, incorporating the high-resolution feathered visual of Dr. Wallach and his co-host seamlessly into the warm glowing hero banner.
+
+> 📖 **Need step-by-step help installing or customizing this template?**  
+> Check out the complete [**Detailed Installation & Customization Guide (INSTALLATION_GUIDE.md)**](INSTALLATION_GUIDE.md).
 
 ---
 
