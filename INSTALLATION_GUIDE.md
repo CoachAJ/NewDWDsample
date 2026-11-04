@@ -64,7 +64,7 @@ You can easily adjust the site’s text, phone numbers, doctor name, and colors 
    - **Social Media URLs**: Paste your official URLs for **Facebook**, **YouTube**, **Rumble**, **Apple Podcasts**, and **X (Twitter)**. Leaving any field blank automatically hides that icon.
    - **Hero Tagline Kicker**: Edit *"Your Health. Your Journey. Your Life."*.
    - **Hero Title Intro**: Edit *"Discover the Power of"*.
-   - **Hero Script Text**: Edit *"90 for Life!"*.
+   - **90 for Life Badge Image**: Select or upload a custom badge image (defaults to official emerald green 90 For Life emblem).
    - **Hero Description**: Edit *"Your trusted resource for empowering healthier lives through the nutritional teachings of Dr. Joel D. Wallach, BS, DVM, ND."*.
    - **Hero Action Callout**: Edit *"Get Educated. Get Empowered. Get Started!"*.
    - **Custom Logo**: Upload or select a different logo file from Joomla Media Manager.
@@ -83,13 +83,14 @@ All images used by the template are stored in:
 | File Name | Purpose | Dimensions |
 | :--- | :--- | :--- |
 | **`logo.png`** | Header navigation logo with stethoscope & sunflower | ~420 × 80 px (transparent PNG) |
+| **`90-for-life-badge.png`** | Official emerald green 90 For Life emblem with leaf | ~736 × 524 px (transparent PNG) |
 | **`hero-people.png`** | Dr. Joel Wallach & Co-host photo (feathered left edge) | ~865 × 750 px (transparent PNG) |
 | **`hero-bg.jpg`** | Warm golden bokeh hero background | 1600 × 650 px (JPG) |
 | **`food-diary-notebook.png`** | Spiral notebook with sunflower for the sidebar module | ~64 × 110 px (transparent PNG) |
-| **`card-news.jpg`** | Feature Card 1 background (Health News) | 600 × 450 px (JPG) |
-| **`card-store.jpg`** | Feature Card 2 background (Store / Supplements) | 600 × 450 px (JPG) |
-| **`card-coach.jpg`** | Feature Card 3 background (Find a Coach) | 600 × 450 px (JPG) |
-| **`card-about.jpg`** | Feature Card 4 background (About Us) | 600 × 450 px (JPG) |
+| **`card-news.jpg`** | Feature Card 1 background (Health News) | 1024 × 682 px (JPG) |
+| **`card-store.jpg`** | Feature Card 2 background (Store / Supplements) | 1024 × 682 px (JPG) |
+| **`card-coach.jpg`** | Feature Card 3 background (Find a Coach) | 1024 × 682 px (JPG) |
+| **`card-about.jpg`** | Feature Card 4 background (About Us) | 1024 × 682 px (JPG) |
 
 > **Tip:** To update Dr. Wallach's photo or any card graphic, simply replace the image file with the same file name, or edit [`css/template.css`](file:///c:/Users/atifj/OneDrive/Desktop/NEW%20DWD%20Sample/css/template.css).
 

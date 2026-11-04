@@ -64,7 +64,7 @@
                 </field>
                 <field name="heroKicker" type="text" default="Your Health. Your Journey. Your Life." label="Hero Tagline Kicker" />
                 <field name="heroTitle" type="text" default="Discover the Power of" label="Hero Title Intro" />
-                <field name="heroScript" type="text" default="90 for Life!" label="Hero Script Text" />
+                <field name="heroBadgeImg" type="media" label="90 for Life Badge Image" description="Upload or select custom 90 for Life badge graphic (defaults to official emerald green emblem)" />
                 <field name="heroDesc" type="textarea" rows="3" default="Your trusted resource for empowering healthier lives through the nutritional teachings of Dr. Joel D. Wallach, BS, DVM, ND." label="Hero Description" />
                 <field name="heroTagline" type="text" default="Get Educated. Get Empowered. Get Started!" label="Hero Action Callout" />
                 <field name="customLogo" type="media" label="Custom Logo" description="Upload custom header logo" />

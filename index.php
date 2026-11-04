@@ -36,7 +36,8 @@ $twitterUrl      = $params->get('twitterUrl', 'https://x.com');
 $showHero        = (bool) $params->get('showHero', 1);
 $heroKicker      = $params->get('heroKicker', 'Your Health. Your Journey. Your Life.');
 $heroTitle       = $params->get('heroTitle', 'Discover the Power of');
-$heroScript      = $params->get('heroScript', '90 for Life!');
+$heroBadgeImg    = $params->get('heroBadgeImg', '');
+$heroBadgeUrl    = !empty($heroBadgeImg) ? htmlspecialchars($heroBadgeImg, ENT_QUOTES, 'UTF-8') : $templatePath . '/images/90-for-life-badge.png';
 $heroDesc        = $params->get('heroDesc', 'Your trusted resource for empowering healthier lives through the nutritional teachings of Dr. Joel D. Wallach, BS, DVM, ND.');
 $heroTagline     = $params->get('heroTagline', 'Get Educated. Get Empowered. Get Started!');
 $customLogo      = $params->get('customLogo', '');
@@ -518,7 +519,10 @@ $displayHero      = ($showHero && ($countHero > 0 || ($isHome && $demoContent)))
                                     <div class="dwd-hero-typography">
                                         <div class="dwd-hero-kicker"><?php echo htmlspecialchars($heroKicker, ENT_QUOTES, 'UTF-8'); ?></div>
                                         <h1 class="dwd-hero-title">
-                                            <?php echo htmlspecialchars($heroTitle, ENT_QUOTES, 'UTF-8'); ?> <span class="dwd-hero-script"><?php echo htmlspecialchars($heroScript, ENT_QUOTES, 'UTF-8'); ?></span>
+                                            <span class="dwd-hero-title-text"><?php echo htmlspecialchars($heroTitle, ENT_QUOTES, 'UTF-8'); ?></span>
+                                            <span class="dwd-hero-90badge-wrap" title="90 for Life">
+                                                <img src="<?php echo $heroBadgeUrl; ?>" alt="90 for Life" class="dwd-hero-90badge-img" width="96" height="68">
+                                            </span>
                                         </h1>
                                         <p class="dwd-hero-desc">
                                             <?php echo htmlspecialchars($heroDesc, ENT_QUOTES, 'UTF-8'); ?>
