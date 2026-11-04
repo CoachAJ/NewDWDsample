@@ -706,6 +706,33 @@ img {
     margin-bottom: 20px;
 }
 
+.dwd-feature-card-link {
+    display: block;
+    position: relative;
+    border-radius: var(--dwd-radius-lg);
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(8, 50, 86, 0.08);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    background-color: var(--dwd-white);
+}
+
+.dwd-feature-card-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(8, 50, 86, 0.16);
+}
+
+.dwd-feature-card-link:active {
+    transform: scale(0.98);
+}
+
+.dwd-card-graphic {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--dwd-radius-lg);
+    object-fit: cover;
+}
+
 .dwd-feature-card {
     background-color: var(--dwd-white);
     border-radius: var(--dwd-radius-md);

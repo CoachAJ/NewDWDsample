@@ -197,54 +197,30 @@ Create a **Custom** module for each position (`bottom-1`, `bottom-2`, `bottom-3`
 
 **Card 1 (`bottom-1`): Health News**
 ```html
-<div class="dwd-feature-card">
-    <div class="dwd-card-bg-wrap"><img src="templates/dailywithdoc/images/card-news.jpg" alt="Health News"></div>
-    <div class="dwd-card-content">
-        <div class="dwd-card-icon-circle"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H5c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h14c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-8-3H6v-2h5v2zm7 0h-5v-2h5v2zm0-4H6v-2h11v2z"/></svg></div>
-        <h3 class="dwd-card-title">Health News</h3>
-        <p class="dwd-card-desc">The latest on nutrition, supplements and holistic wellness.</p>
-        <a href="/health-news" class="btn-navy">READ NOW</a>
-    </div>
-</div>
+<a href="/health-news" class="dwd-feature-card-link" title="Health News">
+    <img src="templates/dailywithdoc/images/card-news.jpg" alt="Health News - The latest on nutrition, supplements and holistic wellness" class="dwd-card-graphic" loading="lazy">
+</a>
 ```
 
 **Card 2 (`bottom-2`): Store**
 ```html
-<div class="dwd-feature-card">
-    <div class="dwd-card-bg-wrap"><img src="templates/dailywithdoc/images/card-store.jpg" alt="Store"></div>
-    <div class="dwd-card-content">
-        <div class="dwd-card-icon-circle"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg></div>
-        <h3 class="dwd-card-title">Store</h3>
-        <p class="dwd-card-desc">Quality products to support your health journey.</p>
-        <a href="/store" class="btn-navy">SHOP NOW</a>
-    </div>
-</div>
+<a href="/store" class="dwd-feature-card-link" title="Store">
+    <img src="templates/dailywithdoc/images/card-store.jpg" alt="Store - Quality products to support your health journey" class="dwd-card-graphic" loading="lazy">
+</a>
 ```
 
 **Card 3 (`bottom-3`): Find a Coach for You**
 ```html
-<div class="dwd-feature-card">
-    <div class="dwd-card-bg-wrap"><img src="templates/dailywithdoc/images/card-coach.jpg" alt="Find a Coach"></div>
-    <div class="dwd-card-content">
-        <div class="dwd-card-icon-circle"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
-        <h3 class="dwd-card-title">Find a Coach for You</h3>
-        <p class="dwd-card-desc">Work with a certified Wholistic Health Coach.</p>
-        <a href="/find-a-coach" class="btn-navy">FIND A COACH</a>
-    </div>
-</div>
+<a href="/find-a-coach" class="dwd-feature-card-link" title="Find a Coach for You">
+    <img src="templates/dailywithdoc/images/card-coach.jpg" alt="Find a Coach for You - Work with a certified Wholistic Health Coach" class="dwd-card-graphic" loading="lazy">
+</a>
 ```
 
 **Card 4 (`bottom-4`): About Us**
 ```html
-<div class="dwd-feature-card">
-    <div class="dwd-card-bg-wrap"><img src="templates/dailywithdoc/images/card-about.jpg" alt="About Us"></div>
-    <div class="dwd-card-content">
-        <div class="dwd-card-icon-circle"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg></div>
-        <h3 class="dwd-card-title">About Us</h3>
-        <p class="dwd-card-desc">Our mission, story and vision for healthier lives.</p>
-        <a href="/about" class="btn-navy">LEARN MORE</a>
-    </div>
-</div>
+<a href="/about" class="dwd-feature-card-link" title="About Us">
+    <img src="templates/dailywithdoc/images/card-about.jpg" alt="About Us - Our mission, story and vision for healthier lives" class="dwd-card-graphic" loading="lazy">
+</a>
 ```
 
 ---
@@ -285,3 +261,4 @@ To ensure your URLs, search features, and AEO/SEO structured data work at peak p
      - **Site Meta Description**: `Empowering healthier lives through the 90 for Life nutritional teachings of Dr. Joel D. Wallach BS, DVM, ND.`
 3. **Smart Search Index**:
    - Go to **Smart Search** &rarr; **Index** and click **Index** so your site’s articles and products are searchable from the template’s search bar.
+
