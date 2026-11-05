@@ -554,8 +554,8 @@ img {
 }
 
 .dwd-hero-content {
-    flex: 1;
-    max-width: 58%;
+    flex: 1.1;
+    max-width: 55%;
     padding: 24px 16px 24px 28px;
     display: flex;
     flex-direction: column;
@@ -723,10 +723,10 @@ img {
 
 /* Hero People Photo */
 .dwd-hero-visual {
-    flex: 1;
+    flex: 0.95;
     position: relative;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: flex-end;
     overflow: hidden;
 }
@@ -734,10 +734,12 @@ img {
 .dwd-hero-people-img {
     height: 100%;
     width: 100%;
-    max-height: 380px;
+    max-height: 390px;
     object-fit: cover;
-    object-position: right top;
-    filter: drop-shadow(-4px 0 16px rgba(255, 245, 210, 0.4));
+    object-position: center center;
+    filter: drop-shadow(0 4px 16px rgba(8, 50, 86, 0.12));
+    border-top-right-radius: var(--dwd-radius-lg);
+    border-bottom-right-radius: var(--dwd-radius-lg);
 }
 
 /* ==========================================================================

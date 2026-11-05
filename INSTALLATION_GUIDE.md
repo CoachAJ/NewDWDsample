@@ -84,7 +84,7 @@ All images used by the template are stored in:
 | :--- | :--- | :--- |
 | **`logo.png`** | Header navigation logo with stethoscope & sunflower | ~420 × 80 px (transparent PNG) |
 | **`90-for-life-badge.png`** | Official emerald green 90 For Life emblem with leaf | ~736 × 524 px (transparent PNG) |
-| **`hero-people.png`** | Dr. Joel Wallach & Co-host photo (feathered left edge) | ~865 × 750 px (transparent PNG) |
+| **`hero-people.png`** | Dr. Joel Wallach & Co-host crisp high-definition photo | 1024 × 840 px (PNG) |
 | **`hero-bg.jpg`** | Warm golden bokeh hero background | 1600 × 650 px (JPG) |
 | **`food-diary-notebook.png`** | Spiral notebook with sunflower for the sidebar module | ~64 × 110 px (transparent PNG) |
 | **`card-news.jpg`** | Feature Card 1 background (Health News) | 1024 × 682 px (JPG) |
